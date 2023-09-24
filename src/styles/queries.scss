@@ -1,0 +1,160 @@
+@media (max-width: 391px) {
+  // HEADER
+  html {
+    max-width: 390px;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-style: normal;
+    padding: 0 3.2rem;
+    position: relative;
+    height: 10rem;
+
+    &__logo {
+      cursor: pointer;
+      display: block;
+      font-family: 'Elephant', sans-serif;
+      color: #224f34;
+      font-size: 4rem;
+    }
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.97);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(100%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-out;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4.8rem;
+    }
+
+    &__list > li:nth-child(1),
+    &__list > li:nth-child(2),
+    &__list > li:nth-child(3),
+    &__list > li:nth-child(4),
+    &__list > li:nth-child(5) {
+      margin-right: 0;
+    }
+
+    &-link:link,
+    &-link:visited {
+      font-size: 3rem;
+    }
+
+    &-btn-mobile {
+      display: block;
+    }
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav--open {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav--close {
+    display: none;
+  }
+
+  // HERO
+
+  .section-hero {
+    padding: 4rem;
+    max-width: 390px;
+    margin: 0 auto;
+    text-align: center;
+
+    &-hero {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    &-heading {
+      font-size: 32px;
+      margin: 1rem;
+      margin-bottom: 1.6rem;
+    }
+
+    &-description {
+      white-space: nowrap;
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
+    }
+
+    &-button:link,
+    &-button:visited {
+      display: inline-block;
+      font-size: 1.8rem;
+      padding: 1.2rem 3rem;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  // SELLING
+
+  .section-selling {
+    padding: 4rem;
+    max-width: 390px;
+    margin: 0 auto;
+    text-align: center;
+
+    &-offer {
+      grid-template-columns: 1fr;
+    }
+
+    &-card {
+      width: 100%;
+    }
+
+    &-card-img {
+      width: 100%;
+      height: auto;
+    }
+
+    &-card-info {
+      display: block;
+      text-align: center;
+      display: flex;
+    }
+
+    &-card-info-rate {
+      display: flex;
+      align-items: center;
+      width: 50%;
+    }
+
+    &-card-info-price span {
+      width: 50%;
+    }
+  }
+}
