@@ -7,7 +7,7 @@ export function Header() {
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen)
   }
-
+  const isMobile = window.innerWidth <= 390
   const openIconStyle = isNavOpen ? { display: 'none' } : { display: 'block' }
   const closeIconStyle = isNavOpen ? { display: 'block' } : { display: 'none' }
 
@@ -33,22 +33,23 @@ export function Header() {
           </li>
           <li>
             <a className='main-nav-link' href='#'>
-              Conta ct
+              Contact
             </a>
           </li>
           <li>
-            <div className='main-nav__icon'>
-              <img
-                className='icon-mobile-nav--open'
-                src={require('../assets/images/shopping-bag.svg').default}
-                alt='basket icon'
-              />
-              <img
-                className='icon-mobile-nav--close'
-                src={require('../assets/images/ellipse.svg').default}
-                alt='basket ellipse'
-              />
-            </div>
+            {isMobile ? (
+              <a className='main-nav-link main-nav-link-basket' href='#'>
+                Basket
+              </a>
+            ) : (
+              <div className='main-nav__icon'>
+                <img
+                  className='icon-mobile-nav--open'
+                  src={require('../assets/images/basket_icon.svg').default}
+                  alt='basket icon'
+                />
+              </div>
+            )}
           </li>
           <li>
             <a className='main-nav-link nav-login' href='#'>

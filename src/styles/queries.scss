@@ -68,6 +68,16 @@
       font-size: 3rem;
     }
 
+    &-link-basket:link,
+    &-link-basket:visited {
+      font-size: 3rem;
+      color: #16271d;
+      padding: 1.1rem 4.1rem;
+      border-radius: 5px;
+      background-color: #c3d0c8;
+      border: 2px solid #224f34;
+    }
+
     &-btn-mobile {
       display: block;
     }

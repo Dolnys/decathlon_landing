@@ -58,7 +58,8 @@ export function Selling() {
             handleSeeAllClick()
           }}
         >
-          {showAll ? 'See less' : 'See all'}&nbsp;&nbsp;&rarr;
+          {showAll ? 'See less' : 'See all'}&nbsp;&nbsp;
+          {showAll ? '\u2191' : '\u2192'}
         </a>
       </div>
     </section>
