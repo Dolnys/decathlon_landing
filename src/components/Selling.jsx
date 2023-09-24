@@ -5,13 +5,14 @@ import { Product } from './Product'
 export function Selling() {
   const [products, setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(false)
+  const [showAll, setShowAll] = useState(false)
 
   useEffect(() => {
     const getProducts = async () => {
       setIsLoading(true)
       try {
         const response = await fetch(
-          `https://fakestoreapi.com/products?limit=3`
+          `https://fakestoreapi.com/products?limit=${showAll ? 9 : 3}`
         )
         const data = await response.json()
         setProducts(data)
@@ -21,18 +22,10 @@ export function Selling() {
       setIsLoading(false)
     }
     getProducts()
-  }, [])
+  }, [showAll])
 
-  const handleSeeAllClick = async () => {
-    setIsLoading(true)
-    try {
-      const response = await fetch(`https://fakestoreapi.com/products?limit=9`)
-      const newProd = await response.json()
-      setProducts((prevProducts) => [...newProd])
-    } catch (error) {
-      console.error('An error occurred while downloading products:', error)
-    }
-    setIsLoading(false)
+  const handleSeeAllClick = () => {
+    setShowAll(!showAll)
   }
 
   return (
@@ -43,7 +36,7 @@ export function Selling() {
           Get in on the trend with our curated selection of best-selling styles.
         </h2>
       </div>
-
+      {isLoading && <div className='loading'>Loading... </div>}
       <div className='section-selling-offer'>
         {products.map((product) => (
           <Product
@@ -65,7 +58,7 @@ export function Selling() {
             handleSeeAllClick()
           }}
         >
-          See all&nbsp;&nbsp;&rarr;
+          {showAll ? 'See less' : 'See all'}&nbsp;&nbsp;&rarr;
         </a>
       </div>
     </section>

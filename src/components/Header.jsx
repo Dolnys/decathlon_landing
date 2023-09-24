@@ -33,7 +33,7 @@ export function Header() {
           </li>
           <li>
             <a className='main-nav-link' href='#'>
-              Contact
+              Conta ct
             </a>
           </li>
           <li>
