@@ -1,12 +1,14 @@
 import React from 'react'
 
 export function Product({ title, price, rating, image }) {
+  const truncatedTitle = title.length > 30 ? title.slice(0, 30) + '...' : title
+
   return (
     <div className='section-selling-card'>
       <img src={image} alt={title} className='section-selling-card-img' />
       <div className='section-selling-card-content'>
         <div className='section-selling-card-title'>
-          <span>{title}</span>
+          <span>{truncatedTitle}</span>
         </div>
         <div className='section-selling-card-info'>
           <div className='section-selling-card-info-price'>

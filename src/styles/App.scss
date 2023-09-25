@@ -249,14 +249,21 @@ html {
     max-width: 170rem;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8rem;
   }
 
   &-card {
     width: 43rem;
     flex-shrink: 0;
     max-height: 726px;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
 
+    &:hover {
+      transform: scale(1.05);
+      z-index: 1;
+    }
     &-img {
       width: 100%;
       background-color: #c2efd4;
