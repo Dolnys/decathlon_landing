@@ -2,12 +2,12 @@
 
 Decathlon Recruitment Task - Strona dostępna [tutaj](https://decathlonpage.netlify.app/).
 
-Strona internetowa została zoptymalizowana pod kątem dwóch szerokości ekranu: 1800px i 390px. Kluczowymi elementami są:
+Strona internetowa została zoptymalizowana pod kątem dwóch szerokości ekranu: 1800px i 390px. Kluczowymi lementami są:
 
 - Menu mobilne ukryte pod przyciskiem hamburger menu.
 - Wyświetlanie trzech produktów na starcie, załadowanych z API.
 - Dynamiczne ładowanie kolejnych sześciu produktów po kliknięciu "See all".
-- Możliwość powrotu do pierwotnego stanu po ponownym naciśnięciu "See all".
+- Możliwość powrotu do pierwotnego stanu po ponownym naciśnięciu "See less".
 - indykator ładowania danych z API
 
 ## Technologie
