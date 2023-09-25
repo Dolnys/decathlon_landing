@@ -11,7 +11,6 @@ export function App() {
         <Hero />
         <Selling />
       </main>
-      <script src='assets/scripts/main.js'></script>
     </div>
   )
 }
